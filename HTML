@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your virtual Study-bud</title>
+  <link rel="StyleSheet" href="app.css">
+  <link rel="StyleSheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/handsontable@12.4.0/dist/handsontable.min.css">
+</head>
+
+<body>
+  
+
+  <!-- The top Navigation bar is divided into 2 blocks
+        The Left block is solely designated for the logo
+        & the Right block is divided into Navigation tabs-->
+
+  <div class="nav-con">
+
+    <div class="navLogo"> <img src="logo.png" alt="logo" class="navLogo"> </div>
+    <div class="navBar">
+
+
+      <div class="navItem">
+
+        <button class="navbutton">
+          <a href="" class="dash"> Dashboard</a>
+        </button>
+
+        <button class="navbutton">
+          <a href="" class="Focus">Focus mode</a>
+        </button>
+
+        <button class="navbutton">
+          <a href="" class="Dexcel">Daily excel</a>
+        </button>
+
+        <button class="navbutton">
+          <a href="" class="journal"> Daily journal </a>
+        </button>
+
+        <button class="navbutton">
+          <a href="" class="prof"> Profile </a>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- END OF NAVBAR -->
+
+  </div>
+
+  <div class="trns"></div>
+  <div class="quote-container">
+    <h1>Today's Quote</h1>
+    <p id="quote"></p>
+  </div>
+
+  <div class="main-win">
+
+    <div class="container">
+      <button class="toggle" onclick="toggleMode()">Switch to Stopwatch</button>
+      <div class="display">05:00</div>
+      <input type="number" id="timerInput" placeholder="Set minutes" style="display: none;">
+      <br>
+      <button class="start" onclick="start()">Start</button>
+      <button class="pause" onclick="pause()">Pause</button>
+      <button class="reset" onclick="reset()">Reset</button>
+  </div>
+
+
+    <div id="excel-sheet" style="width: 100%; height: 500px;"></div>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@12.4.0/dist/handsontable.min.js"></script>
+
+
+
+
+    <div class="todo-container">
+      <h2>To-Do List</h2>
+      <input type="text" id="taskInput" placeholder="Add a task...">
+      <button onclick="addTask()">Add</button>
+      <ul id="taskList"></ul>
+  </div>
+
+</div>
+
+
+
+  <h2>📝 Daily Journal</h2>
+    <textarea id="journalEntry" placeholder="Write your thoughts here..."></textarea>
+    <button onclick="saveEntry()">Save
+    </button>
+
+    
+  <script src="app.js"></script>
+</body>
+
+</html>
